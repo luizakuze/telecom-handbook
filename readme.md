@@ -1,8 +1,20 @@
-# Telecom Handbook 🌱
+# Telecom Handbook 🍀
 
 Esse repositório contém os meus materiais do curso de Engenharia de Telecomunicações no Instituto Federal de Santa Catarina (IFSC), o qual ingressei em 2022.
 
-## Meu registro acadêmico 🍀
+## Publicações 
+
+- [Testbed para Proxies de Gestão de Identidades: Uma Análise Prática do Shibboleth, SimpleSAMLphp e SATOSA](https://doi.org/10.5753/sbseg_estendido.2025.11983)
+
+
+## Eventos que participei  
+
+- XXV Simpósio Brasileiro de Cibersegurança - Foz do Iguaçu (2025)
+- Hacking Na Web Day - Florianópolis (2025)
+- PrograMaria Summit - Online (2024)
+- Code Island - Florianópolis (2023)
+  
+## Meu registro acadêmico  
 
 Disciplinas com 🌸 são as minhas concluídas!
 
