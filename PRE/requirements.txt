@@ -1,0 +1,5 @@
+numpy
+matplotlib
+pre
+ipython
+PyQt5

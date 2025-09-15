@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: meumysql
+    environment:
+      MYSQL_DATABASE: bcd
+      MYSQL_ROOT_PASSWORD: senhaRoot
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_USER: aluno
+      MYSQL_PASSWORD: senhaAluno
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    cap_add:
+      - SYS_NICE
