@@ -1,0 +1,47 @@
+|fsm2
+clk => pr_state~1.DATAIN
+rst => pr_state~3.DATAIN
+TEMPO[0] => LessThan0.IN10
+TEMPO[0] => LessThan1.IN10
+TEMPO[0] => LessThan2.IN10
+TEMPO[0] => LessThan3.IN10
+TEMPO[0] => LessThan4.IN10
+TEMPO[1] => LessThan0.IN9
+TEMPO[1] => LessThan1.IN9
+TEMPO[1] => LessThan2.IN9
+TEMPO[1] => LessThan3.IN9
+TEMPO[1] => LessThan4.IN9
+TEMPO[2] => LessThan0.IN8
+TEMPO[2] => LessThan1.IN8
+TEMPO[2] => LessThan2.IN8
+TEMPO[2] => LessThan3.IN8
+TEMPO[2] => LessThan4.IN8
+TEMPO[3] => LessThan0.IN7
+TEMPO[3] => LessThan1.IN7
+TEMPO[3] => LessThan2.IN7
+TEMPO[3] => LessThan3.IN7
+TEMPO[3] => LessThan4.IN7
+TEMPO[4] => LessThan0.IN6
+TEMPO[4] => LessThan1.IN6
+TEMPO[4] => LessThan2.IN6
+TEMPO[4] => LessThan3.IN6
+TEMPO[4] => LessThan4.IN6
+START => Selector1.IN3
+START => Selector0.IN1
+GAMBI => nx_state.OUTPUTSELECT
+GAMBI => nx_state.OUTPUTSELECT
+GAMBI => Selector9.IN4
+NIVEL => nx_state.DATAA
+NIVEL => Selector2.IN3
+NIVEL => Selector7.IN3
+NIVEL => Selector8.IN3
+NIVEL => Selector1.IN1
+NIVEL => nx_state.DATAA
+NIVEL => Selector6.IN1
+NIVEL => Selector9.IN1
+M1 <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+M2 <= M2.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,285 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "M1",
+					"strict" : false
+				},
+				{
+					"name" : "V",
+					"strict" : false
+				},
+				{
+					"name" : "TEMPO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[7]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[8]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[9]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[10]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[11]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[12]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[13]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[14]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[15]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[16]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[17]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[18]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[19]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[20]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[21]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[22]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[23]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[24]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[25]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[26]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[27]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[28]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[29]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[30]",
+					"strict" : false
+				},
+				{
+					"name" : "NIVEL[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "START[1]",
+					"strict" : false
+				},
+				{
+					"name" : "START[2]",
+					"strict" : false
+				},
+				{
+					"name" : "START[3]",
+					"strict" : false
+				},
+				{
+					"name" : "START[0]",
+					"strict" : false
+				},
+				{
+					"name" : "START[4]",
+					"strict" : false
+				},
+				{
+					"name" : "START[5]",
+					"strict" : false
+				},
+				{
+					"name" : "START[6]",
+					"strict" : false
+				},
+				{
+					"name" : "START[7]",
+					"strict" : false
+				},
+				{
+					"name" : "START[8]",
+					"strict" : false
+				},
+				{
+					"name" : "START[9]",
+					"strict" : false
+				},
+				{
+					"name" : "START[10]",
+					"strict" : false
+				},
+				{
+					"name" : "START[11]",
+					"strict" : false
+				},
+				{
+					"name" : "START[12]",
+					"strict" : false
+				},
+				{
+					"name" : "START[13]",
+					"strict" : false
+				},
+				{
+					"name" : "START[14]",
+					"strict" : false
+				},
+				{
+					"name" : "START[15]",
+					"strict" : false
+				},
+				{
+					"name" : "START[16]",
+					"strict" : false
+				},
+				{
+					"name" : "START[17]",
+					"strict" : false
+				},
+				{
+					"name" : "START[18]",
+					"strict" : false
+				},
+				{
+					"name" : "START[19]",
+					"strict" : false
+				},
+				{
+					"name" : "START[20]",
+					"strict" : false
+				},
+				{
+					"name" : "START[21]",
+					"strict" : false
+				},
+				{
+					"name" : "START[22]",
+					"strict" : false
+				},
+				{
+					"name" : "START[23]",
+					"strict" : false
+				},
+				{
+					"name" : "START[24]",
+					"strict" : false
+				},
+				{
+					"name" : "START[25]",
+					"strict" : false
+				},
+				{
+					"name" : "START[26]",
+					"strict" : false
+				},
+				{
+					"name" : "START[27]",
+					"strict" : false
+				},
+				{
+					"name" : "START[28]",
+					"strict" : false
+				},
+				{
+					"name" : "START[29]",
+					"strict" : false
+				},
+				{
+					"name" : "START[30]",
+					"strict" : false
+				},
+				{
+					"name" : "START[31]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

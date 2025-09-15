@@ -1,0 +1,25 @@
+|updown
+clk => r_next[0].CLK
+clk => r_next[1].CLK
+clk => r_next[2].CLK
+clk => r_next[3].CLK
+clk => r_reg[0].CLK
+clk => r_reg[1].CLK
+clk => r_reg[2].CLK
+clk => r_reg[3].CLK
+rst => r_reg[0].ACLR
+rst => r_reg[1].ACLR
+rst => r_reg[2].ACLR
+rst => r_reg[3].ACLR
+rst => r_next[0].ENA
+rst => r_next[3].ENA
+rst => r_next[2].ENA
+rst => r_next[1].ENA
+q_logic[0] <= r_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q_logic[1] <= r_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q_logic[2] <= r_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q_logic[3] <= r_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q_integer[0] <= r_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q_integer[1] <= r_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

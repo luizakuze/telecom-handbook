@@ -1,0 +1,33 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+
+
+entity carry_ripple_adder is
+	generic (N : natural := 3);
+	port (
+		a, b : std_logic_vector (N-1 downto 0);
+		cin  : std_logic;
+		s    : out std_logic_vector (N-1 downto 0);
+		cout : out std_logic
+	);
+end entity;
+
+-- versao concorrente
+architecture ifsc_v1 of carry_ripple_adder is
+	signal c: std_logic_vector (N-1 downto 0);
+begin
+c(0) <= cin;
+l1: for i in (0 to N-1) generate
+		s(i) <= a(i) xor b(i) xor c(i);
+		c(i+1) <= (a(i) and b(i)) or (a(i) and c(i)) or (b(i) and c(i));
+	end generate;
+	cout <= c(N);
+end architecture;
+
+end ifsc_v1; 
+
+configuration <configuration_name> of carry_ripple_adder is
+	for ifsc_v1	end for;
+--	for ifsc_v2 end for;
+end <configuration_name>; 

@@ -1,0 +1,13 @@
+
+State Machine - |fsm2|pr_state
+Name pr_state.CENTRIFUGA pr_state.ESVAZIA2 pr_state.ENXAGUA pr_state.ENCHE2 pr_state.ESVAZIA1 pr_state.BATE2 pr_state.MOLHO pr_state.BATE1 pr_state.ENCHE1 pr_state.PARADO 
+pr_state.PARADO 0 0 0 0 0 0 0 0 0 0 
+pr_state.ENCHE1 0 0 0 0 0 0 0 0 1 1 
+pr_state.BATE1 0 0 0 0 0 0 0 1 0 1 
+pr_state.MOLHO 0 0 0 0 0 0 1 0 0 1 
+pr_state.BATE2 0 0 0 0 0 1 0 0 0 1 
+pr_state.ESVAZIA1 0 0 0 0 1 0 0 0 0 1 
+pr_state.ENCHE2 0 0 0 1 0 0 0 0 0 1 
+pr_state.ENXAGUA 0 0 1 0 0 0 0 0 0 1 
+pr_state.ESVAZIA2 0 1 0 0 0 0 0 0 0 1 
+pr_state.CENTRIFUGA 1 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,59 @@
+# do fsm_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /opt/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/luiza.k12/eld2/aula-27/fsm2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:16:22 on Jul 26,2024
+# vcom -reportprogress 300 -93 -work work /home/luiza.k12/eld2/aula-27/fsm2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fsm2
+# -- Compiling architecture ifsc_v1 of fsm2
+# End time: 11:16:22 on Jul 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vsim work.fsm2(ifsc_v1)
+# vsim work.fsm2(ifsc_v1) 
+# Start time: 11:16:27 on Jul 26,2024
+# //  ModelSim - Intel FPGA Edition 2020.1 Feb 28 2020 Linux 4.19.0-27-amd64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim - Intel FPGA Edition and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fsm2(ifsc_v1)
+add wave -position end  sim:/fsm2/clk
+add wave -position end  sim:/fsm2/rst
+add wave -position end  sim:/fsm2/TEMPO
+add wave -position end  sim:/fsm2/START
+add wave -position end  sim:/fsm2/GAMBI
+add wave -position end  sim:/fsm2/NIVEL
+add wave -position end  sim:/fsm2/M1
+add wave -position end  sim:/fsm2/M2
+add wave -position end  sim:/fsm2/B
+add wave -position end  sim:/fsm2/V
+add wave -position end  sim:/fsm2/pr_state
+add wave -position end  sim:/fsm2/nx_state
+# End time: 11:16:38 on Jul 26,2024, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 0

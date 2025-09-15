@@ -1,0 +1,92 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity gcd is
+   port(
+      clk, reset: in std_logic;
+      start: in std_logic;
+      a_in, c_in: in std_logic_vector(7 downto 0);
+      ready: out std_logic;
+      r: out std_logic_vector(7 downto 0)
+   );
+end entity;
+
+--Algoritmo E (Algoritmo Euclidiano Original). Dados dois inteiros A e C maiores que um, este algoritmo encontra seu maior divisor comum.
+--E1. [A é divisível por C?] Se C divide A, o algoritmo termina com C como a resposta.
+--E2. [Substitua A pelo resto.] Se A mod C é igual a um, os números dados eram primos entre si, então o algoritmo termina. Caso contrário, substitua o par de valores (A, C) por (C, A mod C) e retorne ao passo E1.
+
+architecture euclidean_algorithm of gcd is
+   type state_type is (idle, E1, E2);
+   signal state_reg, state_next: state_type;
+   signal a_reg, a_next, c_reg, c_next: unsigned(7 downto 0);
+begin
+   -- state & data registers
+   process(clk,reset)
+   begin
+      if reset='1' then
+         state_reg <= idle;
+         a_reg <= (others=>'0');
+         c_reg <= (others=>'0');
+      elsif (clk'event and clk='1') then
+         state_reg <= state_next;
+         a_reg <= a_next;
+         c_reg <= c_next;
+      end if;
+   end process;
+   -- next-state logic & data path functional units/routing
+   process(state_reg,a_reg,c_reg,start,a_in,c_in)
+   begin
+      a_next <= a_reg;
+      c_next <= c_reg;
+      case state_reg is
+         when idle =>
+            if start='1' then
+               a_next <= unsigned(a_in);
+               c_next <= unsigned(c_in);
+               state_next <= E1;
+            else
+               state_next <= idle;
+            end if;
+         when E1 =>
+            if (a_reg mod c_reg = 0) then
+               state_next <= idle;
+					r <= std_logic_vector(c_reg);
+            else 
+               state_next <= E2;
+            end if;
+         when E2 =>
+            if (c_reg mod a_reg = 1) then
+               state_next <= idle; 
+				else 
+					a_next <= c_reg;
+					c_next <= a_reg mod c_reg;
+					state_next <= E1;
+				end if; 
+			end case;
+   end process;
+	
+--    --output
+--   process(state_reg,a_reg,c_reg,start,a_in,c_in)
+--   begin 
+--		
+--		ready <= '1' when state_reg=idle else '0';
+--		r <= std_logic_vector(a_reg);
+--		
+--      case state_reg is
+--         when idle => 
+--         when E1 => 
+--            if (a_reg mod c_reg = 0) then
+--					r <= c_reg;
+--				end;
+--         when E2 =>
+--      end case;
+--			
+--   end process;
+	
+   
+end architecture;
+
+configuration ifsc of gcd is
+	for euclidean_algorithm end for;
+end configuration;

@@ -1,0 +1,40 @@
+library ieee;
+use ieee.numeric_st.all;
+use ieee.std_logic_1164.all;
+
+entity ld_zeros is 
+	generic(N: natural := 4);
+	port(data: in std_logic_vector(N-1 downto 0)
+		  qt_zeros: out unsigned(N-1 downto 0));
+end entity;
+
+--versao 1 concorrente - total de zeros
+architecture ifsc_v1 of ld_zeros is
+	signal N_ZEROS: integer 0 to N;
+begin
+	N_ZEROS <= 0;
+	l1:for i in data'range generate
+			if (data(i) = '1') then
+				N_ZEROS := N_ZEROS + 1;
+			end if;
+		end generate;
+end architecture;
+
+----versao 2 concorrente - total de zeros
+--architecture ifsc_v1 of ld_zeros is
+--begin
+--	signal N_ZEROS: integer 0 to N;
+--begin
+--	N_ZEROS <= 0;
+--	l1:for i in data'range generate
+--			if (data(i) = '1') then
+--				N_ZEROS := N_ZEROS + 1;
+--			end if;
+--		end generate;
+--end architecture;
+
+configuration cfg_zeros of ld_zeros is
+	for ifsc_v1 end for;
+--	for ifsc_v2 end for;
+--	for ifsc_v3 end for;
+end configuration;

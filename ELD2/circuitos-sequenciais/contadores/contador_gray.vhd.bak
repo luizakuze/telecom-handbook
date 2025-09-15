@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity contador_gray is
+	generic(N: natural := 4);
+	port(clk, rst: in std_logic;
+		  q: out std_logic_vector);
+end entity;
+
+architecture ifsc_v1 of contador_gray is
+	signal r_reg: unsigned(N-1 downto 0);
+	signal r_next: unsigned(N-1 downto 0);
+begin
+	process (clk, rst) is
+		if (rst = '1') then
+			r_reg <= (others=>'0');
+		elsif (rising_edge(clk)) then
+			r_reg <= r_next;
+		end if;
+	end process;
+	
+	-- converte GRAY -> BINARIO
+	binary <= r_reg xor ('0' & r_reg(N-1 downto 1));
+	
+	-- incrementa em binario 
+	binary <= binary + 1;
+	
+	-- converte BINARIO -> GRAY
+	r_next <= binary xor ('0' & binary(N-1 downto 1));
+	
+   q <= std_logic_vector(g_reg);
+end architecture;
+
+configuration cfg_gray of contador_gray is
+	for ifsc_v1 end for;
+end configuration;

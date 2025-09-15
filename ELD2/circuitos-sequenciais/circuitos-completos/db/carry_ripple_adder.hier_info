@@ -1,0 +1,11 @@
+|ld_zeros2
+d[0] => ~NO_FANOUT~
+d[1] => ~NO_FANOUT~
+d[2] => ~NO_FANOUT~
+d[3] => ~NO_FANOUT~
+d[4] => ~NO_FANOUT~
+q[0] <= <GND>
+q[1] <= <GND>
+q[2] <= <GND>
+
+

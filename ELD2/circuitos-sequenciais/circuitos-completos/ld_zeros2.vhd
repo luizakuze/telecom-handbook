@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ld_zeros2 is
+	generic (N: natural:= 5);
+	port(d: in std_logic_vector (N-1 downto 0);
+		  q: out integer range 0 to N-1 );
+end entity;
+
+
+-- conta quantos '1' antes do primeiro zero
+architecture ld1_zero of ld_zeros2 is
+begin
+	process(d) is
+		variable um: integer range 0 to N-1;
+	begin	
+		um := 0; -- inicializando...
+		for i in d'range loop 
+			case d(i) is
+				when '1' => um := um + 1;  -- conta...
+				when others => exit;
+			end case;
+		end loop;
+		q <= um;
+	end process;
+end architecture;
+
+
+-- conta quantos '1' no total
+architecture ld1_zero of ld_zeros2 is
+begin
+	process(d) is
+		variable um: integer range 0 to N-1;
+	begin	
+		um := 0; -- inicializando...
+		for i in d'range loop 
+			case d(i) is
+				when '1' => um := um + 1;  -- conta...
+				when others => next;
+			end case;
+		end loop;
+		q <= um;
+	end process;
+end architecture;
+

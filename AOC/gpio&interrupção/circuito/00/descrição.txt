@@ -1,0 +1,6 @@
+Quando o circuito é ligado, o ATmega328P controla os LEDs de acordo com a programação. 
+
+
+- Pinos 0 a 7 (Porta D): Pinos de I/O digitais, servem para controlar LEDs
+- Pinos 8 a 13 (Porta B): Pinos de I/O digitais, servem para controlar LEDs
+- Pino AVCC e AREF: Alimentação e referência de tensão.

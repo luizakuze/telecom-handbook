@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "q_logic[0]",
+					"strict" : false
+				},
+				{
+					"name" : "q_logic[1]",
+					"strict" : false
+				},
+				{
+					"name" : "q_logic[2]",
+					"strict" : false
+				},
+				{
+					"name" : "q_logic[3]",
+					"strict" : false
+				},
+				{
+					"name" : "q_integer[0]",
+					"strict" : false
+				},
+				{
+					"name" : "q_integer[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

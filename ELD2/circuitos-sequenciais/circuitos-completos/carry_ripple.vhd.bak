@@ -1,0 +1,9 @@
+-- carry ripple adder
+
+entity carry_ripple is 
+	generic (N: natural := 4);
+	port (a, b: std_logic_vector (N-1 downto 0);
+			cin: std_logic;
+			s: out std_logic_vector(N-1 downto 0); 
+			cout: out std_logic);
+end entity;

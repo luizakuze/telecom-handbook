@@ -1,0 +1,50 @@
+CM Example 1 :	Dipole in free space 	
+CM See GetStarted.txt
+CM 
+CM 
+CM 
+CM 
+CE
+SY SD=0.10005	'distancia entre antenas diretoras
+SY SR=0.12006	'distancia entre o refletor
+SY refletor=0.16	'comprimento refletor
+SY diretor1=0.1511	'comprimento 1 diretor
+SY diretor2=0.1477405	'comprimento 2 diretor
+SY diretor3=0.148741	'comprimento 3 diretor
+SY diretor4=0.150075	'comprimento 4 diretor
+SY diametro=0.003	'diametro do dipolo, das antenas
+SY raio=0.0015	'raio das antenas
+SY dipoloTamanho=0.17	'comprimento do dipolo
+SY diretor5=0.1484075	'comprimento 5 diretor
+SY diretor6=0.14674	'comprimento 6 diretor
+SY diretor7=0.146073	'comprimento 7 diretor
+SY diretor8=0.146073	'comprimento 8 diretor
+SY diretor9=0.145406	'comprimento 9 diretor
+SY diretor10=0.1437385	'comprimento 10 diretor
+SY d12=0.1334	'distancia entre diretores 1 e 2
+SY d23=0.18009	'distancia entre diretores 2 e 3
+SY d34=0.19343	'distancia entre diretores 3 e 4
+SY d45=0.19343	'distancia entre diretores 4 e 5
+SY d56=0.24012	'distancia entre diretores 5 e 6
+SY d67=0.24012	'distancia entre diretores 6 e 7
+SY d78=0.24012	'distancia entre diretores 7 e 8
+SY d89=0.24012	'distancia entre diretores 8 e 9
+SY d910=0.24012	'distancia entre diretores 9 e 10
+GW	1	11	0	-dipoloTamanho	0	0	dipoloTamanho	0	raio	'Wire 1, 9 segments, halve wavelength long.
+GW	2	11	-SR	-refletor	0	-SR	refletor	0	raio
+GW	3	11	SD	-diretor1	0	SD	diretor1	0	raio
+GW	4	11	SD+d12	-diretor2	0	SD+d12	diretor2	0	raio
+GW	5	11	SD+d12+d23	-diretor3	0	SD+d12+d23	diretor3	0	raio
+GW	6	11	SD+d12+d23+d34	-diretor4	0	SD+d12+d23+d34	diretor4	0	raio
+GW	7	11	SD+d12+d23+d34+d45	-diretor5	0	SD+d12+d23+d34+d45	diretor5	0	raio
+GW	8	11	SD+d12+d23+d34+d45+d56	-diretor6	0	SD+d12+d23+d34+d45+d56	diretor6	0	raio
+GW	9	11	SD+d12+d23+d34+d45+d56+d67	-diretor7	0	SD+d12+d23+d34+d45+d56+d67	diretor7	0	raio
+GW	10	11	SD+d12+d23+d34+d45+d56+d67+d78	-diretor8	0	SD+d12+d23+d34+d45+d56+d67+d78	diretor8	0	raio
+GW	11	11	SD+d12+d23+d34+d45+d56+d67+d78+d89	-diretor9	0	SD+d12+d23+d34+d45+d56+d67+d78+d89	diretor9	0	raio
+GW	12	11	SD+d12+d23+d34+d45+d56+d67+d78+d89+d910	-diretor10	0	SD+d12+d23+d34+d45+d56+d67+d78+d89+d910	diretor10	0	raio
+GE	0
+GN	-1
+EK
+EX	0	1	6	0	1	0	0	'Voltage source (1+j0) at wire 1 segment 5.
+FR	0	0	0	0	450	0
+EN

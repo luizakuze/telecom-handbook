@@ -1,0 +1,23 @@
+-- conversor bcd -> ssd
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity conversor_bcd_ssd is 
+	port (clk, rst: std_logic;
+			d: std_logic_vector(3 downto 0);
+			unidade, centena, dezena: std_logic_vector(3 downto 0));
+end entity;
+
+
+architecture v1 of conversor_bcd_ssd is
+	 u_next, d_next, c_next signal: std_logic_vector(3 downto 0);
+begin
+	process(rst, clk) is
+	if (rst = '1') then
+		q <= (others => '0');
+	elsif (rising_edge(clk)) then
+		q <= conversor;
+	end if;
+
+end architecture;

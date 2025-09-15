@@ -1,0 +1,97 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/luiza.k12/eld2/aula-31/simulation/modelsim
+Ccfg_ifsc
+emem_ctrl
+atwo_seg_arch2
+DAx4 work 8 mem_ctrl 13 two_seg_arch2 22 ;RZKA96@lY5X7nTfTHY`m1
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z3 DEx4 work 8 mem_ctrl 0 22 1;I:h1oGRb[;Nfz26]SFC0
+!i122 1
+Z4 w1722949433
+R0
+Z5 8../../mem_ctrl.vhd
+Z6 F../../mem_ctrl.vhd
+l0
+L127 1
+Vao4D7m75DaTV_4E4XNWIC2
+!s100 zZYVg40ABT]a<a=fLCJnJ0
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1723999916
+!i10b 0
+Z9 !s108 1723999916.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|../../mem_ctrl.vhd|
+!s107 ../../mem_ctrl.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Emem_ctrl
+R4
+R1
+R2
+!i122 1
+R0
+R5
+R6
+l0
+L9 1
+V1;I:h1oGRb[;Nfz26]SFC0
+!s100 6bVZQ3`S4k:1cdzkQTcX90
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 ../../mem_ctrl.vhd|
+!i113 1
+R11
+R12
+Atwo_seg_arch2
+R1
+R2
+R3
+!i122 1
+l78
+Z14 L74 52
+Z15 V;RZKA96@lY5X7nTfTHY`m1
+Z16 !s100 F<jjRWj;o5OXnMon5aRL_0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12
+Atwo_seg_arch
+R1
+R2
+R3
+!i122 1
+l23
+Z17 L19 54
+Z18 V8UgW9@P1QEHha^=fc9?P22
+Z19 !s100 5f:Y>ES3CjXlVijWdoSWz0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R13
+!i113 1
+R11
+R12

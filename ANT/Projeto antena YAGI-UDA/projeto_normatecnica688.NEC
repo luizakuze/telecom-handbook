@@ -1,0 +1,36 @@
+CM Example 1 :	Dipole in free space 	
+CM See GetStarted.txt
+CM 
+CM 
+CM 
+CM 
+CE
+SY SD=0.1334	'distancia entre antenas diretoras
+SY SR=0.1334	'distancia entre o refletor
+SY refletor=0.17	'comprimento refletor
+SY diretor1=0.148	'comprimento 1 diretor
+SY diretor2=0.140	'comprimento 2 diretor
+SY diretor3=0.145	'comprimento 3 diretor
+SY diretor4=0.143	'comprimento 4 diretor
+SY diametro=0.003	'diametro do dipolo, das antenas
+SY raio=0.0015	'raio das antenas
+SY dipoloTamanho=0.17	'comprimento do dipolo
+SY diretor5=0.139	'comprimento 5 diretor
+GW	1	11	0	-dipoloTamanho	0	0	dipoloTamanho	0	raio	'Wire 1, 9 segments, halve wavelength long.
+GW	2	11	-SR	-refletor	0	-SR	refletor	0	raio
+GW	3	11	SD	-diretor1	0	SD	diretor1	0	raio
+GW	4	11	2*SD	-diretor2	0	2*SD	diretor2	0	raio
+GW	5	11	3*SD	-diretor3	0	3*SD	diretor3	0	raio
+GW	6	11	4*SD	-diretor4	0	4*SD	diretor4	0	raio
+GW	7	11	5*SD	-diretor5	0	5*SD	diretor5	0	raio
+GW	8	11	6*SD	-diretor5	0	6*SD	diretor5	0	raio
+GW	9	11	7*SD	-diretor5	0	7*SD	diretor5	0	raio
+GW	10	11	8*SD	-diretor5	0	8*SD	diretor5	0	raio
+GW	11	11	9*SD	-diretor4	0	9*SD	diretor4	0	raio
+GW	12	11	10*SD	-diretor3	0	10*SD	diretor3	0	raio
+GE	0
+GN	-1
+EK
+EX	0	1	6	0	1	0	0	'Voltage source (1+j0) at wire 1 segment 5.
+FR	0	0	0	0	450	0
+EN

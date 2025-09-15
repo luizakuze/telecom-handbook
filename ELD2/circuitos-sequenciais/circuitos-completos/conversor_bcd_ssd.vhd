@@ -1,0 +1,136 @@
+---- conversor bcd -> ssd
+--library ieee;
+--use ieee.std_logic_1164.all;
+--use ieee.numeric_std.all;
+--
+--entity conversor_bcd_ssd is 
+--	port (clk, rst: std_logic;
+--			d: std_logic_vector(3 downto 0);
+--			unidade, centena, dezena: std_logic_vector(3 downto 0));
+--end entity;
+--
+--
+--architecture v1 of conversor_bcd_ssd is
+--	 signal u_next, d_next, c_next: unsigned(3 downto 0);
+--	 signal u_next, d_next, c_next: unsigned(3 downto 0);
+--begin
+--	process(rst, clk) is
+--	begin
+--	if (rst = '1') then
+--		u_reg <= (others => '0');
+--		d_reg <= (others => '0');
+--		c_reg <= (others => '0');
+--	elsif (rising_edge(clk)) then
+--		u_reg <= u_next;
+--		d_reg <= d_next;
+--		c_reg <= c_next;
+--	end if;
+--	end process;
+--	
+--	u_next <= (others => '0') when u_reg=9 else 
+--				 u_reg+1;
+--				 
+--	d_next <= (others => '0') when  (d_reg=9 and u_reg=9) else 
+--				 d_reg+1 when u_reg=9 else 
+--				 d_reg;
+--				 
+--	c_next <= (others => '0') when  (c_reg=9 and d_reg=9 and u_reg=9) else 
+--				 c_reg+1 when (u_reg=9 and d_reg=9) else 
+--				 c_reg;
+--				 
+--	unidade <= std_logic_vector(u_reg);
+--	dezena <= std_logic_vector(d_reg);
+--	centena <= std_logic_vector(c_reg);	 
+--end architecture;
+--
+--architecture v2 of conversor_bcd_ssd is
+--	 signal u_next, d_next, c_next: unsigned(3 downto 0);
+--	 signal u_next, d_next, c_next: unsigned(3 downto 0);
+--	 signal clk_u, clk_d: std_logic := 1; --comeca em 1
+--begin
+--	process(rst, clk) is
+--	begin
+--	if (rst = '1') then
+--		u_reg <= (others => '0'); 
+--	elsif (rising_edge(clk)) then
+--		u_reg <= u_next; 
+--	end if;
+--	end process;
+--	
+--	process(rst, clk_d) is
+--	begin
+--		if (rst = '1') then
+--			d_reg <= (others => '0'); 
+--		elsif (rising_edge(clk_d)) then
+--			d_reg <= d_next; 
+--		end if;	
+--	end process;
+--	
+--	
+--	process(rst, clk_c) is
+--	begin
+--		if (rst = '1') then
+--			c_reg <= (others => '0'); 
+--		elsif (rising_edge(clk_c)) then
+--			c_reg <= c_next; 
+--		end if;
+--	end process;
+--	
+--	
+--	clk_d <= '1' when u_reg=9 else '0';
+--	clk_c <= '1' when d_reg=9 else '0';
+--	
+--	
+--	u_next <= (others => '0') when  u_reg=9 else 
+--				 u_reg+1;
+--				 
+--	d_next <= (others => '0') when  d_reg=9 else 
+--				 d_reg+1;
+--				 
+--	c_next <= (others => '0') when  c_reg=9 else 
+--				 c_reg+1;
+--				 
+--	unidade <= std_logic_vector(u_reg);
+--	dezena <= std_logic_vector(d_reg);
+--	centena <= std_logic_vector(c_reg);	 
+--end architecture;
+--
+--architecture v3 of conversor_bcd_ssd is
+--begin
+--	process(rst, clk, u_reg, d_reg, c_reg)  
+--		variable u_next, d_next, c_next: unsigned(3 downto 0);
+--	begin
+--		if (rst = '1') then 
+--			u_next := 0;
+--			d_next := 0;
+--			c_next := 0;
+--		elsif (rising_edge(clk)) then
+--			d_next <= d_reg;
+--			c_next <= c_reg;
+--			if (u_reg /= 9) then
+--				u_next <= u_reg+1;
+--			else -- (9)
+--				u_next <= (others => '0');
+--				if (d_reg /= 9) then
+--					d_next <= d_reg+1;
+--				else -- (99)
+--					d_next <= (others => '0');
+--					if (c_reg /= 9) then
+--						c_next <= c_reg+1;
+--					else --(999)
+--						c_next <= (others => '0');
+--					end if;	
+--				end if;
+--			end if;
+--		end if;
+--	
+--	u_reg <= u_next;
+--	d_reg <= d_next;
+--	c_reg <= c_next;
+--		 
+--	unidade <= std_logic_vector(u_reg);
+--	dezena <= std_logic_vector(d_reg);
+--	centena <= std_logic_vector(c_reg);	 
+--	
+--	end process;	
+--end architecture;

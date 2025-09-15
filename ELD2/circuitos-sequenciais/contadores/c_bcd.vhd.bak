@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity c_bcd is
+	generic(N_BITS: natural := 3
+			  MAX_VALUE: natural:= 6);
+	port(clk, rst: std_logic;
+end entity;
+
+architecture ifsc_v1 of c_bcd is
+	signal reg_d1, reg_d10, reg_d100: unsigned(N_BITS-1 downto 0);
+	signal next_d1, next_d10, next_d100: unsigned(N_BITS-1 downto 0);
+begin
+	process(clk, rst) is
+		if (rst = '1') then
+			reg_d1 <= (others=>'0');
+			reg_d10 <= (others=>'0');
+			reg_d100 <= (others=>'0');
+		elsif (rising_edge(clk)) then
+			reg_d1 <= next_d1;
+			reg_d10 <= next_d10;
+			reg_d100 <= next_d100;
+		end if;
+	end process;
+	
+	next_d1 <= (others=>'0') when (reg_d1=9) else
+				  reg_d1+1;
+	next_d10 <= (others=>'0') when (reg_d1=9 and reg_d10=9) else
+					(reg_d10+1) when (reg_d1=9) else
+					reg_d1;
+	next_d100 <= (others=>'0') when (reg_d1=9 and reg_d10=9 and reg_d100=9) else
+					(reg_d100+1) when (reg_d1=9 and reg_d10=9) else
+					reg_d1;
+end architecture;
+
+configuration cfg_bcd of c_bcd is
+	for ifsc_v1 end for;
+	--for ifsc_v2 end for;
+end configuration;

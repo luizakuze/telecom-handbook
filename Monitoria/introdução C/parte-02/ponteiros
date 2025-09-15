@@ -1,0 +1,50 @@
+SWAP VARIÁVEIS - FUNÇÃO PONTEIROS
+
+#include <stdio.h>
+
+void trocarValores(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 5, y = 10;
+    printf("Antes da troca: x = %d, y = %d\n", x, y);
+    trocarValores(&x, &y);
+    printf("Após a troca: x = %d, y = %d\n", x, y);
+    return 0;
+}
+
+NUMERO APONTADO P NUMERO
+
+#include <stdio.h>
+
+int main() {
+    int numero = 42;
+    int *ponteiro = &numero;
+
+    printf("Valor de 'numero': %d\n", numero);
+    printf("Valor apontado por 'ponteiro': %d\n", *ponteiro);
+
+    *ponteiro = 100; // Modificando o valor apontado por 'ponteiro'
+    printf("Novo valor de 'numero': %d\n", numero);
+
+    return 0;
+}
+
+PONTEIRO APONTANDO P PONTEIRO
+
+#include <stdio.h>
+
+int main() {
+    int numero = 42;
+    int *ponteiro1 = &numero;
+    int **ponteiro2 = &ponteiro1;
+
+    printf("Valor de 'numero': %d\n", numero);
+    printf("Valor apontado por 'ponteiro1': %d\n", *ponteiro1);
+    printf("Valor apontado por 'ponteiro2': %d\n", **ponteiro2);
+
+    return 0;
+}

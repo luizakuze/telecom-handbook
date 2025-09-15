@@ -1,0 +1,9 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity conta_N is
+	generic(N_BITS: natural := 2;
+			  MAX_VALUE: natural := 2);
+			  
+end entity;
